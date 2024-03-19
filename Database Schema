@@ -1,0 +1,269 @@
+Table System_Static {
+Contract_No varchar(20) [pk]
+Borrower_Type_New varchar(3)
+Vehicle_Type nvarchar(500)
+Contract_Start_Date varchar(30)
+Contract_End_Date varchar(30)
+Borrower nvarchar(445)
+Co_Borrower nvarchar(445)
+Guarantor nvarchar(445)
+Dealer nvarchar(445)
+App_Region nvarchar(100)
+Payment_mode nvarchar(100)
+Financed_Amount decimal(18,2)
+Rental_Amount decimal(18,2)
+Portfolio numeric(38,5)
+Rental_Term int 
+Paid_Rental int
+Unpaid_Rental int
+Total_tds decimal(38,5)
+Received_TDS decimal(38,5)
+TDS_Outstanding decimal(38,5)
+Asset_Model nvarchar(100)
+Asset_make nvarchar(500)
+Registration_Number nvarchar(20)
+Bounce_Reason varchar(500)
+Bounce_Reason_Date datetime
+F_And_I_Manager nvarchar(445)
+Address1 varchar(500)
+Address2 varchar(200)
+Address3 int
+City nvarchar(400)
+Zipcode nvarchar(400)
+Region nvarchar(400)
+Phone1 varchar(50)
+Phone2 varchar(50)
+Phone3 varchar(50)
+Phone4 varchar(50)
+Phone5 varchar(50)
+Phone6 varchar(50)
+Email_Address1 varchar(50)
+Email_Address2 varchar(50)
+Vin_Number varchar(20)
+Engine_Number varchar(25)
+Co_Borrower_Address1 varchar(500)
+Co_Borrower_Address2 varchar(200)
+Co_Borrower_Address3 varchar(200)
+Co_Borrower_City nvarchar(400)
+Co_Borrower_Zipcode nvarchar(400)
+Co_Borrower_Region nvarchar(400)
+Co_Borrower_Phone1 varchar(50)
+Co_Borrower_Phone2 varchar(50)
+Co_Borrower_Phone3 varchar(50)
+Co_Borrower_Phone4 varchar(50)
+Co_Borrower_Phone5 varchar(50)
+Guarantor_Address1 varchar(50)
+Guarantor_Address2 varchar(50)
+Guarantor_City nvarchar(400)
+Guarantor_Zipcode nvarchar(400)
+Guarantor_Region nvarchar(400)
+Guarantor_Phone1 varchar(50)
+Guarantor_Phone2 varchar(50)
+Guarantor_Phone3 varchar(50)
+Guarantor_Phone4 varchar(50)
+Guarantor_Phone5 varchar(50)
+Gaurantor_Address3 varchar(200)
+Financial_Product_Name varchar(200)
+Pan_Number varchar(100)
+}
+
+
+Table ManagerProfile{
+  City nvarchar(400)
+  Region nvarchar(400)
+  Manager varchar
+}
+Table Status{
+  MB varchar
+  ME varchar
+  con_1 varchar
+  Res varchar
+}
+Table Ref_Moratorium{
+  Contract_No varchar [pk]
+  MoratoriumRestructure_Cases_details varchar
+}  
+
+Table ManagerandAgencyManager{
+  City nvarchar[400]
+  Region nvarchar(400)
+  CV_Manager nvarchar
+  PC_Manager nvarchar
+  CV_AgencyManger nvarchar
+  PC_AgencyManger nvarchar
+
+}
+
+
+Table BorrowerTypeNew{
+  Contract_No varchar
+  Borrower_type_new varchar 
+}
+
+Table TLCRE{
+  CRE varchar
+  City nvarchar(400)
+  Zipcode nvarchar(400)
+  TL varchar
+}
+  
+Table Data{
+  Contract_Number varchar(20)
+  G_and_NG varchar
+  Risk_Level varchar
+  New_Contract_Status varchar
+  Case_inclusion_Date datetime
+  Inhouse_Allocation varchar
+  Field_Retainers varchar
+  Manager_Agency varchar 
+  Manager_Vendor varchar 
+  Status_Allocation varchar
+  Allocation_date datetime
+  Final_Status varchar
+  Reporting_status varchar
+  Paid_Date datetime
+  POS_2 decimal
+  Opening_DPD  int
+  Opening_DPD_Band varchar(14)
+  ME_DPD int
+  ME_DPD_band varchar(14)
+  Under_clerance_contract int
+  Borrower_Type_New nvarchar(445)
+  Vehicle_Type nvarchar(500)
+  Contract_Start_Date varchar(30)
+  Contract_End_Date varchar(30)
+  EMI_Day int
+  Borrower nvarchar(445)
+  Borrower_count int
+  Co_Borrower nvarchar(445)
+  Guarantor nvarchar(445)
+  Dealer nvarchar(445)
+  App_Region nvarchar(100)
+  Payment_mode nvarchar(100)
+  Financed_Amount decimal(18,2)
+  Rental_Amount decimal(38,5)
+  Over_Due_Rental int
+  Rental_Outstanding decimal(38,5)
+  Cheque_Bounce_Charge decimal(18,2)
+  OD_Charges decimal(18,2)
+  Other_Charges decimal(18,2)
+  Total_Outstanding decimal(38,5)
+  Portfolio numeric(38,5)
+  DPD int
+  DPD_Band varchar(14)
+  Rental_Term int
+  Paid_Rental int
+  Unpaid_Rental int
+  Total_tds decimal(38,5)
+  Received_TDS decimal(38,5)
+  TDS_Outstanding decimal(38,5)
+  Asset_Model nvarchar(100)
+  Asset_make nvarchar(500)
+  Registration_Number varchar(20)
+  Bounce_Reason varchar(500)
+  Bounce_Reason_Date datetime
+  TDS_Status varchar(7)
+  Collection_TDS_Flag varchar(15)
+  F_And_I_Manager nvarchar(445)
+  Address1 varchar(500)
+  Address2 varchar(500)
+  Address3 int
+  City nvarchar(400)
+  Zipcode nvarchar(400)
+  Region nvarchar(400)
+  Phone1 varchar(50)
+  Phone2 varchar(50)
+  Phone3 varchar(50)
+  Phone4 varchar(50)
+  Phone5 varchar(50)
+  Phone6 varchar(50)
+  Email_Address1 varchar(50)
+  Email_Address2 varchar(50)
+  Vin_Number varchar(20)
+  Engine_Number varchar(25)
+  Co_Borrower_Address1 varchar(500)
+  Co_Borrower_Address2 varchar(500)
+  Co_Borrower_Address3 varchar(500)
+  Co_Borrower_City nvarchar(400)
+  Co_Borrower_Zipcode nvarchar(400)
+  Co_Borrower_Region nvarchar(400)
+  Co_Borrower_Phone1 varchar(50)
+  Co_Borrower_Phone2 varchar(50)
+  Co_Borrower_Phone3 varchar(50)
+  Co_Borrower_Phone4 varchar(50)
+  Co_Borrower_Phone5 varchar(50)
+  Guarantor_Address1 varchar(500)
+  Guarantor_Address2 varchar(200)
+  Guarantor_City nvarchar(400)
+  Guarantor_Zipcode nvarchar(400)
+  Guarantor_Region nvarchar(400)
+  Guarantor_Phone1 varchar(50)
+  Guarantor_Phone2 varchar(50)
+  Guarantor_Phone3 varchar(50)
+  Guarantor_Phone4 varchar(50)
+  Guarantor_Phone5 varchar(50)
+  Gaurantor_Address3 int
+  Financial_Product_Name varchar(500)
+  No_of_days_past int
+  Unique_String varchar
+  Caller_String varchar
+  Field_Retainer_String varchar
+  Manager_String varchar
+  Agency_Manager_String varchar
+  Vendor_string varchar
+  Flag varchar
+  Caller_Pega_string varchar
+  CBSL_TL_String varchar
+  Sec_17 varchar
+  Type_of_Legal_Action varchar
+  Arbitration_Status varchar
+  Section_138_Status varchar
+  LRN datetime
+  Pre_repo_intimation_date datetime
+  Award_Date datetime
+  Collected_POS decimal
+  Month_Of_Service datetime
+  Last_Month_Paid_date datetime
+  Shortfall_Amount varchar
+  CBSL_TL_Name varchar
+  Manager_Dispersion_remarks varchar
+  Moratorium_Restructure_Cases_details varchar
+  Recon_cases varchar
+  Borrower_rental_OS int
+  Last_month_Case_status varchar
+  Manish_file_reporting_DPD int
+  New_Pos varchar
+  Credit_amount_Rx varchar
+  p varchar
+
+} 
+  
+  Ref {
+    Data.Contract_Number - BorrowerTypeNew.Contract_No
+  }
+   
+  Ref{
+    Data.Contract_Number - Ref_Moratorium.Contract_No
+  }
+  Ref {
+    Data.City > ManagerProfile.City
+  }
+  
+  Ref {
+    TLCRE.Zipcode < Data.Zipcode
+  }
+  Ref {
+    Data.City > ManagerandAgencyManager.City
+  }
+  
+  Ref{
+    Data.Contract_Number - System_Static.Contract_No
+  }
+
+  Ref{
+    Data.Opening_DPD_Band > Status.MB
+  }
+  Ref{
+    Data.ME_DPD_band > Status.ME
+  }
+  
